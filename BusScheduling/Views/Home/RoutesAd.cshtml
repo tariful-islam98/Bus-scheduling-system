@@ -1,0 +1,30 @@
+﻿@model BusScheduling.Models.Route
+
+@{
+    ViewData["Title"] = "RoutesAd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Routes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Main Destination
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MainDestination)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stands)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stands)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditRoute" asp-route-id="@Model.RouteNo">Edit</a> |
+    <a asp-action="BusScheduleAdm">Back to List</a>
+</div>

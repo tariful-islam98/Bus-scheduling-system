@@ -1,0 +1,52 @@
+﻿@model BusScheduling.Models.BusSchedule
+
+@{
+    ViewData["Title"] = "EditSchedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditSchedule</h2>
+
+<h4>BusSchedule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditSchedule">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="#" asp-for="BusNo" />
+            <div class="form-group">
+                <label asp-for="BusNo" class="control-label"></label>
+                <input asp-for="BusNo" class="form-control" />
+                <span asp-validation-for="BusNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Route" class="control-label"></label>
+                <input asp-for="Route" class="form-control" />
+                <span asp-validation-for="Route" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DriverName" class="control-label"></label>
+                <input asp-for="DriverName" class="form-control" />
+                <span asp-validation-for="DriverName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" />
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="BusScheduleAdm">Back to List</a>
+</div>
+

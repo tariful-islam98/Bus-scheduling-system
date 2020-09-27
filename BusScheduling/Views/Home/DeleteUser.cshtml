@@ -1,0 +1,46 @@
+﻿@model BusScheduling.Models.User
+
+@{
+    ViewData["Title"] = "DeleteUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete User</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteUser">
+        <input type="hidden" asp-for="UserId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-controller="Home" asp-action="UserList">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+﻿@model BusScheduling.Models.Admin
+
+@{
+    ViewData["Title"] = "AdminAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Account</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ID 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdminId)
+        </dd>
+        <dt>
+            Admin Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdminName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditAdminAcc" asp-route-id="@Model.AdminId">Edit</a> 
+</div>

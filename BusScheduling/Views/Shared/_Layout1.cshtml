@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<title>@ViewData["Title"] - BusScheduling</title>*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @*<meta charset="UTF-8">*@
+    <title>Bus Schedule</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body style="background-color:aqua">
+
+    @*<section class="upper-header">
+            <div class="breaking-news">
+                <marquee behavior="" direction="" scrolldelay="200" style="background-color:#009432;width: 100%; padding: 0px 20px; margin-bottom:-5px; box-sizing: border-box; color: #fff;}">International University of Business Agriculture and Technology</marquee>
+            </div>
+
+        </section>*@
+    <!------------------breaking----------------------->
+    <section>
+        <div class="container-fluid" style=" background-color:#57606f;color:#fff;">
+            <div class="row">
+                <div class="col-sm-2" style="height :100px;">
+                    <span>
+                        <img src="~/images/Logo.jpg" class="img-circle" alt="Cinque Terre" width="100" height="78" style="padding-top:19px; margin-left: 30px;">
+                    </span>
+                </div>
+                <div class="col-sm-8">
+                    <h1 style="font-size:45px;margin-left:75px ; padding-top:20px;">I U B A T</h1>
+
+                </div>
+
+                <div class="slider-holder">
+
+                    <div class="image-holder">
+                        @*<img src="~/images/images.jpg" height="400" width="800" class="slider-image" />*@
+                        @*<img src="~/images/download (2).jpg" height="400" width="800" class="slider-image" />*@
+                        <img src="~/images/bus1.jpg" height="400" width="800" class="slider-image" />
+                    </div>
+                    <div class="button-holder">
+                        <a href="#slider-image-1" class="slider-change"></a>
+                        @*<a href="#slider-image-2" class="slider-change"></a>*@
+                        @*<a href="#slider-image-3" class="slider-change"></a>*@
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="upper-header">
+        <div class="breaking-news">
+            <marquee behavior="" direction="" scrolldelay="200" style="background-color:#009432;width: 100%; padding: 0px 20px; margin-bottom:-5px; box-sizing: border-box; color: #fff;}">International University of Business Agriculture and Technology</marquee>
+        </div>
+
+    </section>
+    <!---------------------------logo end----------------->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#a4b0be;">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bus Scheduling</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Login">Admin</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="UserLogin">User</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+
+            </div>
+        </nav>
+    </section>
+
+    @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bus Scheduling</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BusSchedule">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Login
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownNavbar">
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="Login">Admin</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="UserLogin">User</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>*@
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div id="contact" class="container">
+        @RenderBody()
+        <hr />
+
+
+        <div class="text-center">
+
+
+
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p><span class="glyphicon glyphicon-map-marker"></span>4 Embankment drive road, Sector: 10, Uttara</p>
+                <p><span class="glyphicon glyphicon-phone"></span>Dhaka</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>Website : www.iubat.edu</p>
+
+            </div>
+            <div class="col-md-8">
+                <div>
+                    @RenderBody()
+
+                </div>
+
+
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - BusScheduling - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

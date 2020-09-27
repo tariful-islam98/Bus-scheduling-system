@@ -1,0 +1,40 @@
+﻿@model BusScheduling.Models.Route
+
+@{
+    ViewData["Title"] = "CreateRoute";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Route</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateRoute">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RouteNo" class="control-label">ROute no</label>
+                <input asp-for="RouteNo" class="form-control" />
+                <span asp-validation-for="RouteNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainDestination" class="control-label">Main Destination</label>
+                <input asp-for="MainDestination" class="form-control" />
+                <span asp-validation-for="MainDestination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stands" class="control-label"></label>
+                <input asp-for="Stands" class="form-control" />
+                <span asp-validation-for="Stands" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="BusScheduleAdm">Back to List</a>
+</div>
+

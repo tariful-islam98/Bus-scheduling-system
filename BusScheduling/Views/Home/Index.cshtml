@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BusScheduling.ViewModels.BusScheduleViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+    <style>
+        table {
+            /*border-collapse: separate;*/
+            border-spacing: 15px; /* Apply cell spacing */
+        }
+
+        table, th, td, tr {
+            border: 1px solid #666;
+        }
+
+            table th, table td {
+                padding: 25px; /* Apply cell padding */
+            }
+    </style>
+
+    <body>
+        <h2>Bus Schedule</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Bus No</th>
+                    <th>Route</th>
+                    <th>Driver Name</th>
+                    <th>Driver Contact</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.BusNo</td>
+                        <td>@item.Route</td>
+                        <td>@item.DriverName</td>
+                        <td>@item.Contact</td>
+                        <td>@item.Time</td>
+                        <td>@*<a asp-action="Routes" asp-route-id="@item.Route">Details</a>*@</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>

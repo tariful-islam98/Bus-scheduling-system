@@ -1,0 +1,29 @@
+﻿@model BusScheduling.Models.Route
+
+@{
+    ViewData["Title"] = "Routes";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Routes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Main Destination
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MainDestination)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stands)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stands)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

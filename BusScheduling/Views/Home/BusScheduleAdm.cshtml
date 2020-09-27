@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BusScheduling.ViewModels.BusScheduleViewModel>
+
+@{
+    ViewData["Title"] = "BusScheduleAdm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bus Schedule</h2>
+
+<p>
+    <a asp-controller="Home" asp-action="CreateSchedule">Add New Schedule</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Bus No
+            </th>
+            <th>
+                Route
+            </th>
+            <th>
+                Driver Name
+            </th>
+            <th>
+                Contact
+            </th>
+            <th>
+                Time
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Route)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                <a asp-controller="Home" asp-action="EditSchedule" asp-route-id="@item.BusNo">Edit</a> |
+                @*<a asp-controller="Home" asp-action="RoutesAd" asp-route-id="@item.Route">Details</a> |*@
+                <a asp-controller="Home" asp-action="DeleteSchedule" asp-route-id="@item.BusNo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    @*<a asp-action="CreateRoute">Add Route Information</a>*@
+</div>
