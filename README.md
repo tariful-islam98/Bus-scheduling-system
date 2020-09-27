@@ -1,6 +1,6 @@
 # Bus-scheduling-system
 Asp .net MVC, MS Sql Sever
-***Developed by Tariful Islam Abir***
+***Developed by Tariful Islam Abir, ***
 ***Dhaka, Bangladesh***
 *
 *
